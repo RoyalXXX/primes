@@ -21,6 +21,6 @@ To run, the program requires **RAM** equal to the size of the prime database (**
 No known algorithm can, with this amount of memory, compute the `203 280 221st` prime nearly as quickly.
 
 > [!TIP]
-> The program’s size could be reduced further by using **RAR5** instead of **LZMA2**, as **RAR5** compresses the prime database around **16%** more efficiently.
+> The program’s size could be reduced further by using **RAR5** instead of **LZMA2**, as **RAR5** compresses the prime database around **16%** more efficiently. However, the **UnRAR** library does not allow the data to be decompressed directly into memory without creating temporary files on disk.
 
 
