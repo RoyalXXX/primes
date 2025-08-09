@@ -16,9 +16,8 @@ Storing such a dataset uncompressed would require:
 `203 280 221 × 4 bytes = 813 120 884 bytes` (**~775.45 MB**). If the data is stored not in binary form but as text, the prime number database takes up about **2.2 GB**.
 However, thanks to compression (**LZMA2:25**), the **Primes** program itself is only **172 MB** in size. At runtime, the data is decompressed directly into memory without creating temporary files.
 
-To run, the program requires **RAM** equal to the size of the prime database (**~775.45 MB**) plus a small overhead – totalling up to **778 MB**. Decompression needs an additional **32 MB** (because **LZMA2:25** requires **2²⁵** bytes for decompression.), meaning a peak memory requirement of about **810 MB** during startup. Once running, it uses **778 MB**.
+To run, the program requires **RAM** equal to the size of the prime database (**~775.45 MB**) plus a small overhead – totalling up to **778 MB**. Decompression needs an additional **32 MB** (because **LZMA2:25** requires **2²⁵** bytes for decompression), meaning a peak memory requirement of about **810 MB** during startup. Once running, it uses **778 MB**.
 
-No known algorithm can, with this amount of memory, compute the `203 280 221st` prime nearly as quickly.
 
 > [!TIP]
 > The program’s size could be reduced further by using **RAR5** instead of **LZMA2**, as **RAR5** compresses the prime database around **16%** more efficiently. However, the **UnRAR** library does not allow the data to be decompressed directly into memory without creating temporary files on disk.
