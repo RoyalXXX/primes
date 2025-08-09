@@ -13,7 +13,7 @@ This program serves as a demonstration that prime numbers need not always be com
 For example, **Primes** comes with a built-in database containing `203 280 221` prime numbers. The final entry, `4 294 967 291`, is the largest prime representable in a **32-bit unsigned integer**.
 
 Storing such a dataset uncompressed would require:
-`203 280 221 × 4 bytes = 813 120 884 bytes` (**~775.45 MB**).
+`203 280 221 × 4 bytes = 813 120 884 bytes` (**~775.45 MB**). If the data were stored not in binary form but as text, the prime number database would take up about **~2.2 GB**.
 However, thanks to compression (**LZMA2:25**), the **Primes** program itself is only **172 MB** in size. At runtime, the data is decompressed directly into memory without creating temporary files.
 
 To run, the program requires **RAM** equal to the size of the prime database (**~775.45 MB**) plus a small overhead – totalling up to **778 MB**. Decompression needs an additional **32 MB** (because **LZMA2:25** requires **2²⁵** bytes for decompression.), meaning a peak memory requirement of about **810 MB** during startup. Once running, it uses **778 MB**.
