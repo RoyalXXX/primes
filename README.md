@@ -23,4 +23,4 @@ No known algorithm can, with this amount of memory, compute the `203 280 221st` 
 > [!TIP]
 > The program’s size could be reduced further by using **RAR5** instead of **LZMA2**, as **RAR5** compresses the prime database around **16%** more efficiently. However, the **UnRAR** library does not allow the data to be decompressed directly into memory without creating temporary files on disk.
 
-
+![alt text](https://github.com/RoyalXXX/primes/blob/main/disk_space.png)
