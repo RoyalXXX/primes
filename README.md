@@ -24,6 +24,6 @@ To run, the program requires **RAM** equal to the size of the prime database (**
 
 ![alt text](https://github.com/RoyalXXX/primes/blob/main/disk_space.png)
 
-An alternative approach to further reduce the database size is to store half of the prime gaps instead of the prime numbers themselves (skipping only the first prime pair: 2 and 3). In this scheme, each prime number can be reconstructed by cumulatively summing the stored half-gaps. By doing so, the size of the binary database can be reduced from **~775.45 MB** to **~195 MB**, which can be further compressed to **~110 MB**.
+An alternative approach to further reduce the database size is to store half of the prime gaps instead of the prime numbers themselves (skipping only the first prime pair: 2 and 3). In this scheme, each prime number can be reconstructed by doubling the stored half-gap and adding it to the previous prime number. By doing so, the size of the binary database can be reduced from **~775.45 MB** to **~195 MB**, which can be further compressed to **~110 MB**.
 
 This method leverages the fact that the differences between consecutive primes grow slowly relative to the primes themselves, allowing the storage of smaller values in a compact form. Consequently, the database becomes significantly more space-efficient without sacrificing the ability to reconstruct the full sequence of primes at runtime.
